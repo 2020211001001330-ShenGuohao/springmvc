@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      	    http://www.springframework.org/schema/beans/spring-beans.xsd
+      	    http://www.springframework.org/schema/mvc
+      	    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+      	    http://www.springframework.org/schema/context
+      	    http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 配置创建 spring 容器要扫描的包 -->
+    <context:component-scan base-package="com.sgh.controller"/>
+	<!-- 配置注解驱动 -->
+    <mvc:annotation-driven/>
+    <!-- 注入 SimpleMappingExceptionResolver-->
+    <bean class=
+                  "org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <!--
+		　定义需要特殊处理的异常，用类名或完全路径名作为key，对应的异常页面名作为值，
+		　将不同的异常映射到不同的页面上。
+		-->
+        <property name="exceptionMappings">
+            <props>
+                <prop key="java.lang.NullPointerException">
+                    nullPointerExp.jsp
+                </prop>
+                <prop key="IOException">IOExp.jsp</prop>
+            </props>
+        </property>
+        <!-- 为所有的异常定义默认的异常处理页面，value为默认的异常处理页面 -->
+        <property name="defaultErrorView" value="defaultExp.jsp"></property>
+        <!-- value定义在异常处理页面中获取异常信息的变量名，默认名为exception -->
+        <property name="exceptionAttribute" value="exp"></property>
+    </bean>
+</beans>

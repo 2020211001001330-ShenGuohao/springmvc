@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="01.servlet" />
+        <module name="12-10" />
+        <module name="12-12" />
+        <module name="13-03" />
+        <module name="12-11" />
+        <module name="13-04" />
+        <module name="12-14" />
+        <module name="13-01" />
+        <module name="12-13" />
+        <module name="13-02" />
+        <module name="02.spingmvc" />
+        <module name="12-16" />
+        <module name="13-07" />
+        <module name="12-15" />
+        <module name="13-08" />
+        <module name="12-17" />
+        <module name="13-5" />
+        <module name="13-09" />
+        <module name="13-10" />
+        <module name="13-11" />
+        <module name="12-01" />
+        <module name="13-14" />
+        <module name="13-15" />
+        <module name="12-03" />
+        <module name="13-12" />
+        <module name="03.annotation" />
+        <module name="12-02" />
+        <module name="13-13" />
+        <module name="design_" />
+        <module name="test_2" />
+        <module name="05-json" />
+        <module name="12-05" />
+        <module name="12-04" />
+        <module name="12-07" />
+        <module name="04.controller" />
+        <module name="12-06" />
+        <module name="12-09" />
+        <module name="12-08" />
+        <module name="1306" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="02.hello-springmvc" target="8" />
+      <module name="12" target="8" />
+      <module name="13-06" target="8" />
+      <module name="13-6" target="8" />
+      <module name="6" target="8" />
+      <module name="chapter12-01" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

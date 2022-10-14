@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <!--    给Javabean 起别名     -->
+        <!--<typeAlias type="com.sgh.pojo.Movie" alias="test_moive"/>-->
+
+        <!--   指定包下  ，默认情况下别名就为该类名 类名所有的字母大小写均可以  官方推荐首字母小写 -->
+        <!--  可以使用注解的方式去进行设置别名      -->
+        <package name="com.sgh.pojo"/>
+
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/stu?useSSL=true&amp;useUnicode=true&amp;characterEncoding=utf8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="111111"/>
+            </dataSource>
+        </environment>
+
+    </environments>
+
+
+
+
+    <mappers>
+        <mapper class="com.sgh.dao.StudentMapper"/>
+    </mappers>
+
+</configuration>

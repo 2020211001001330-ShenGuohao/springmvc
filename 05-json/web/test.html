@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON测试</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.common.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script>
+</head>
+<body>
+<h1 style="text-align: center">这里是测试</h1>
+<hr>
+<div id="l_1" style="height: 500px;width: 500px">
+
+</div>
+</body>
+
+
+</html>
+
+<script>
+
+    $(function () {
+        var myChart = echarts.init(document.getElementById('l_1'));
+        var option;
+
+        option = {
+            xAxis: {
+                type: 'category',
+                data: []
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [],
+                    type: 'bar'
+                }
+            ]
+        };
+
+
+        $.ajax({
+            url:"/json_test",
+            success: function(data) {
+                option.xAxis.data=data.x
+                option.series[0].data = data.y
+                myChart.setOption(option);
+                console.log(data.x)
+                console.log(data.y)
+            },
+            error: function(xhr, type, errorThrown) {
+
+            }
+        })
+
+    });
+
+
+
+
+</script>

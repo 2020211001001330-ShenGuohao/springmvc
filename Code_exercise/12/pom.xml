@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>Code_exercise</artifactId>
+        <groupId>org.example</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>12</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>12-01</module>
+        <module>12-02</module>
+        <module>12-03</module>
+        <module>12-04</module>
+        <module>12-05</module>
+        <module>12-06</module>
+        <module>12-07</module>
+        <module>12-08</module>
+        <module>12-09</module>
+        <module>12-10</module>
+        <module>12-11</module>
+        <module>12-12</module>
+        <module>12-13</module>
+        <module>12-14</module>
+        <module>12-15</module>
+        <module>12-16</module>
+        <module>12-17</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+</project>
